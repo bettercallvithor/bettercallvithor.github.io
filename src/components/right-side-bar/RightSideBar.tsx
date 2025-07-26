@@ -6,19 +6,19 @@ function RightSideBar() {
     {
       platform: "GitHub",
       url: "https://github.com/bettercallvithor",
-      icon: "/assets/github.svg",
+      iconPath: "assets/github.svg",
       username: "bettercallvithor"
     },
     {
       platform: "LinkedIn",
       url: "https://www.linkedin.com/in/vithor-tinti/",
-      icon: "/assets/linkedin.svg",
+      iconPath: "assets/linkedin.svg",
       username: "vithor-tinti"
     },
     {
       platform: "Instagram",
       url: "https://www.instagram.com/_vithort/",
-      icon: "/assets/instagram.svg",
+      iconPath: "assets/instagram.svg",
       username: "_vithort"
     }
   ];
@@ -26,7 +26,7 @@ function RightSideBar() {
   return (
     <div className="right-side-bar">
       <div id="img-name-presentation">
-        <img src={`${import.meta.env.BASE_URL}src/assets/20220111_124523.jpg`} alt="Vithor profile picture" className="profile-picture" />
+        <img src={`assets/20220111_124523.jpg`} alt="Vithor profile picture" className="profile-picture" />
         <p>Vithor Tinti</p>
       </div>
 
@@ -34,7 +34,7 @@ function RightSideBar() {
         {socialLinks.map(x => {
           return (
             <a key={x.platform} href={x.url} target='_blank'>
-              <img src={`${import.meta.env.BASE_URL}${x.icon}`} alt={x.platform} className="social-icon" />
+              <img src={x.iconPath} alt={x.platform} className="social-icon" />
               <span>@{x.username}</span>
             </a>
           );

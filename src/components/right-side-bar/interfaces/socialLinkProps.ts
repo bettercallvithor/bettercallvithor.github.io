@@ -1,6 +1,6 @@
 export interface SocialLinkProps {
     platform: string;
     url: string;
-    icon: string;
+    iconPath: string;
     username: string;
 }
