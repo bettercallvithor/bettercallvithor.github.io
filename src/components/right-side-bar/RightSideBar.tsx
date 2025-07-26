@@ -6,19 +6,19 @@ function RightSideBar() {
     {
       platform: "GitHub",
       url: "https://github.com/bettercallvithor",
-      icon: "src/assets/github.svg",
+      icon: "/assets/github.svg",
       username: "bettercallvithor"
     },
     {
       platform: "LinkedIn",
       url: "https://www.linkedin.com/in/vithor-tinti/",
-      icon: "src/assets/linkedin.svg",
+      icon: "/assets/linkedin.svg",
       username: "vithor-tinti"
     },
     {
       platform: "Instagram",
       url: "https://www.instagram.com/_vithort/",
-      icon: "src/assets/instagram.svg",
+      icon: "/assets/instagram.svg",
       username: "_vithort"
     }
   ];
@@ -33,7 +33,7 @@ function RightSideBar() {
       <div className="social-links">
         {socialLinks.map(x => {
           return (
-            <a key={x.platform} href={x.url}>
+            <a key={x.platform} href={x.url} target='_blank'>
               <img src={`${import.meta.env.BASE_URL}${x.icon}`} alt={x.platform} className="social-icon" />
               <span>@{x.username}</span>
             </a>
