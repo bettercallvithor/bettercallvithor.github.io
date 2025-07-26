@@ -1,7 +1,9 @@
+import useIsMobile from '../../hooks/useIsMobile';
 import type { SocialLinkProps } from './interfaces/socialLinkProps';
 import './right-side-bar.css';
 
 function RightSideBar() {
+  const isMobile = useIsMobile();
   const socialLinks: SocialLinkProps[] = [
     {
       platform: "GitHub",
@@ -27,7 +29,7 @@ function RightSideBar() {
     <div className="right-side-bar">
       <div id="img-name-presentation">
         <img src={`assets/20220111_124523.jpg`} alt="Vithor profile picture" className="profile-picture" />
-        <p>Vithor Tinti</p>
+        {!isMobile && <p>Vithor Tinti</p>}
       </div>
 
       <div className="social-links">
