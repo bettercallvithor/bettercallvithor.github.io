@@ -1,4 +1,4 @@
-import type { SocialLinkProps } from './interfaces/SocialLinkProps';
+import type { SocialLinkProps } from './interfaces/socialLinkProps';
 import './right-side-bar.css';
 
 function RightSideBar() {
