@@ -26,7 +26,7 @@ function RightSideBar() {
   return (
     <div className="right-side-bar">
       <div id="img-name-presentation">
-        <img src="src/assets/20220111_124523.jpg" alt="Vithor profile picture" className="profile-picture" />
+        <img src={`${import.meta.env.BASE_URL}src/assets/20220111_124523.jpg`} alt="Vithor profile picture" className="profile-picture" />
         <p>Vithor Tinti</p>
       </div>
 
@@ -34,7 +34,7 @@ function RightSideBar() {
         {socialLinks.map(x => {
           return (
             <a key={x.platform} href={x.url}>
-              <img src={x.icon} alt={x.platform} className="social-icon" />
+              <img src={`${import.meta.env.BASE_URL}${x.icon}`} alt={x.platform} className="social-icon" />
               <span>@{x.username}</span>
             </a>
           );
